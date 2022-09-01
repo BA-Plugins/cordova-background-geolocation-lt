@@ -11,9 +11,13 @@
     <keywords>cordova, phonegap, background geolocation, background, location, tracking, geofence, geofencing</keywords>
 
     <engines>
-        <engine name="cordova" version=">=7.1.0"/>
-        <engine name="cordova-android" version=">=7.0.0"/>
-        <engine name="cordova-ios" version=">=4.5.0"/>
+        <engine name="cordova" version=">=6.4.0"/>
+        <engine name="cordova-android" version=">=5.1.0"/>
+        <engine name="cordova-ios" version=">=4.3.0"/>
+        <engine name="apple-xcode" version=">=8.0.0" />
+    <engine name="apple-ios" version=">=7.0.0" />
+        
+       
     </engines>
 
     <dependency id="cordova-plugin-background-fetch" version="~7.1.1" />
@@ -28,7 +32,9 @@
 
     <platform name="ios">
         <preference name="BACKGROUND_MODE_LOCATION" default="&lt;string&gt;location&lt;/string&gt;" />
-
+        <preference name="deployment-target" value="11.0" />
+        <preference name="target-device" value="universal" />
+        
         <!-- required background modes:  App registers for location updates -->
         <config-file target="*-Info.plist" parent="UIBackgroundModes">
             <array>
@@ -42,6 +48,13 @@
             </feature>
         </config-file>
         
+         <config-file parent="/*" target="config.xml">
+        <feature name="Pods">
+            <param name="ios-package" value="Pods"/>
+        </feature>
+        <preference name="deployment-target" value="11.0" />
+        <preference name="target-device" value="universal" />
+    </config-file>
 
         
         
