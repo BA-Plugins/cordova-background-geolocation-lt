@@ -32,8 +32,7 @@
 
     <platform name="ios">
         <preference name="BACKGROUND_MODE_LOCATION" default="&lt;string&gt;location&lt;/string&gt;" />
-        <preference name="deployment-target" value="11.0" />
-        <preference name="target-device" value="universal" />
+       
         
         <!-- required background modes:  App registers for location updates -->
         <config-file target="*-Info.plist" parent="UIBackgroundModes">
@@ -47,7 +46,9 @@
                 <param name="ios-package" value="CDVBackgroundGeolocation"/>
             </feature>
         </config-file>
-        
+        <config-file target="*-Info.plist" parent="MinimumOSVersion">
+		<string>9.0</string>
+	</config-file>
        
 
         
