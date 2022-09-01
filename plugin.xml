@@ -57,7 +57,7 @@
     <podspec>
         <config>
             <source url="https://github.com/CocoaPods/Specs.git"/>
-            <source url="https://github.com/CocoaLumberjack/CocoaLumberjack.git"/>
+           
         </config>
         <pods use-frameworks="true">
             <pod name="CocoaLumberjack" spec="3.6.0" />
