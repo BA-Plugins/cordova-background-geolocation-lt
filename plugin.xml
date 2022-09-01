@@ -48,13 +48,7 @@
             </feature>
         </config-file>
         
-         <config-file parent="/*" target="config.xml">
-        <feature name="Pods">
-            <param name="ios-package" value="Pods"/>
-        </feature>
-        <preference name="deployment-target" value="11.0" />
-        <preference name="target-device" value="universal" />
-    </config-file>
+       
 
         
         
